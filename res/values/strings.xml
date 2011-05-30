@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Septacular</string>
+	<string name="app_url">www.septacular.com</string>
+	<string name="copyright">(C) septacular.com 2010</string>
+	<string name="no_list_values">Nothing to show! Refresh this list by accessing
+		Menu -&gt; Refresh.</string>
+	<string name="menu_refresh">Refresh</string>
+	<string name="menu_prefs">Options</string>
+	<string name="menu_about">About</string>
+	<string name="menu_debug">Debug</string>
+	<string name="context_copytext">Copy text</string>
+	<string name="context_copylink">Copy link</string>
+	<string name="toast_copytext">Text copied to clipboard</string>
+	<string name="toast_copylink">Link copied to clipboard</string>
+
+	<string-array name="pref_interval_vals">
+		<item>10</item>
+		<item>15</item>
+		<item>30</item>
+		<item>60</item>
+	</string-array>
+
+	<string-array name="pref_interval_keys">
+		<item>10 minutes</item>
+		<item>15 minutes</item>
+		<item>30 minutes</item>
+		<item>Hourly</item>
+	</string-array>
+
+	<string-array name="pref_led_color_vals">
+		<item>-1</item>
+		<item>-65536</item>
+		<item>-16776961</item>
+		<item>-16711936</item>
+		<item>-256</item>
+	</string-array>
+
+	<string-array name="pref_led_color_keys">
+		<item>White</item>
+		<item>Red</item>
+		<item>Blue</item>
+		<item>Green</item>
+		<item>Yellow</item>
+	</string-array>
+
+	<string name="title_prefs">Septacular Options</string>
+	<string name="toast_status_updating">Refreshing feed...</string>
+	<string name="toast_status_updatefailed">Error during update: %s</string>
+	
+	<string name="eula_title">License</string>
+	<string name="eula_accept">Accept</string>
+	<string name="eula_refuse">Refuse</string>
+</resources>

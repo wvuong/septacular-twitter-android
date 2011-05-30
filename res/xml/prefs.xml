@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory android:title="Manage Update Intervals">
+		
+		<CheckBoxPreference android:key="pref_automatic_updates"
+			android:title="Automatic Updates" android:summaryOn="Enabled" android:summaryOff="Disabled"
+			android:defaultValue="false"
+			android:disableDependentsState="false" />
+		
+		<CheckBoxPreference android:key="pref_weekends"
+			android:title="Weekend Alerts"
+			android:summaryOn="Enabled" android:summaryOff="Disabled"
+			android:defaultValue="false"
+			android:dependency="pref_automatic_updates"/>
+		
+		<CheckBoxPreference android:key="pref_inexact_interval"
+			android:title="Conserve Battery Somewhat"
+			android:summaryOn="Enabled" android:summaryOff="Disabled" android:defaultValue="true"
+			android:dependency="pref_automatic_updates" />
+	
+		<ListPreference android:key="pref_interval"
+			android:title="Update Interval" android:summary="Frequency to query feed"
+			android:entries="@array/pref_interval_keys" android:entryValues="@array/pref_interval_vals"
+			android:defaultValue="30"
+			android:dependency="pref_automatic_updates"
+		/>
+	
+		<ListPreference android:key="pref_rushhour_interval"
+			android:title="Rush Hour Update Interval" android:summary="Frequency to query feed during rush hour"
+			android:entries="@array/pref_interval_keys" android:entryValues="@array/pref_interval_vals"
+			android:defaultValue="15" 
+			android:dependency="pref_automatic_updates" />
+			
+		<CheckBoxPreference android:key="pref_rushhour_weekends"
+			android:title="Rush Hour Mode on Weekends" android:summaryOn="Enabled" android:summaryOff="Disabled" 
+			android:defaultValue="false" android:dependency="pref_automatic_updates"/>
+			
+	</PreferenceCategory>
+
+	
+	<!--
+		<CheckBoxPreference android:key="@string/pref_mute"
+		android:title="Mute Notifications" android:summary="Use system level
+		notifications" android:defaultValue="false" />
+	-->
+	
+	<PreferenceCategory android:title="Route Alerts">
+		<CheckBoxPreference android:key="pref_rr"
+			android:title="Regional Rail" android:summaryOn="Enabled"
+			android:summaryOff="Disabled" android:defaultValue="false" />
+
+		<CheckBoxPreference android:key="pref_mfl"
+			android:title="MFL" android:summaryOn="Enabled"
+			android:summaryOff="Disabled" android:defaultValue="false" />
+
+		<CheckBoxPreference android:key="pref_bus"
+			android:title="Bus" android:summaryOn="Enabled" android:summaryOff="Disabled"
+			android:defaultValue="false" />
+
+		<CheckBoxPreference android:key="pref_bsl"
+			android:title="BSL" android:summaryOn="Enabled"
+			android:summaryOff="Disabled" android:defaultValue="false" />
+
+		<CheckBoxPreference android:key="pref_trl"
+			android:title="Trolley" android:summaryOn="Enabled"
+			android:summaryOff="Disabled" android:defaultValue="false" />
+
+		<CheckBoxPreference android:key="pref_nhsl"
+			android:title="Norristown HSL" android:summaryOn="Enabled"
+			android:summaryOff="Disabled" android:defaultValue="false" />
+	</PreferenceCategory>
+
+	<EditTextPreference android:key="pref_watchlist"
+		android:title="Watchlist"
+		android:summary="Notification if any of these words show up in the feed" />
+
+	<PreferenceCategory android:title="Notification Settings">
+		<CheckBoxPreference android:key="pref_vibrate"
+			android:title="Vibrate" android:summaryOn="Enabled" android:summaryOff="Disabled"
+			android:defaultValue="false"/>
+			
+		<RingtonePreference android:key="pref_ringtone"
+			android:title="Ringtone" android:ringtoneType="notification" 
+			android:showDefault="true" android:showSilent="true"
+			android:summary="Select a ringtone" />
+			
+		<CheckBoxPreference android:key="pref_lights"
+			android:title="Notification Lights" android:summaryOn="Enabled" android:summaryOff="Disabled"
+			android:defaultValue="false"/>
+			
+		<ListPreference android:key="pref_lights_color"
+			android:title="Notification Lights Color"
+			android:entries="@array/pref_led_color_keys" android:entryValues="@array/pref_led_color_vals"
+			android:defaultValue="-1"
+			android:dependency="pref_lights"/>
+			
+		<Preference android:key="pref_test_notify"
+			android:title="Test Notification Settings" android:summary="Try out your settings" />
+	</PreferenceCategory>
+
+</PreferenceScreen>
